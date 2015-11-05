@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:maxWidth="300dp"
+        android:textColor="#FFF"
+        android:padding="13dp"
+        android:paddingBottom="35dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lets just say this is a very very huge notice, not just one line."
+        android:background="@drawable/no"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/note_bubble"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+</RelativeLayout>

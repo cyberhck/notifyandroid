@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fossdevs.svce" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.gcm.permission.C2D_MESSAGE" />
+
+    <permission
+        android:name="com.fossdevs.svce.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.fossdevs.svce.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <receiver
+            android:name="com.fossdevs.svce.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.fossdevs.svce" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.fossdevs.svce.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.fossdevs.svce.GcmIntentService" />
+
+        <activity
+            android:name="com.fossdevs.svce.SignUp"
+            android:label="@string/title_activity_sign_up"
+            android:parentActivityName="com.fossdevs.svce.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fossdevs.svce.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.fossdevs.svce.Subscribe"
+            android:label="@string/title_activity_subscribe"
+            android:parentActivityName="com.fossdevs.svce.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fossdevs.svce.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.fossdevs.svce.DisplayNotices"
+            android:label="@string/title_activity_display_notices"
+            android:parentActivityName="com.fossdevs.svce.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fossdevs.svce.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.fossdevs.svce.Unsubscribe"
+            android:label="@string/title_activity_unsubscribe"
+            android:parentActivityName="com.fossdevs.svce.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fossdevs.svce.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

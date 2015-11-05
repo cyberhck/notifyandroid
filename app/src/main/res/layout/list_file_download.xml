@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/no"
+        android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#FFF"
+                android:padding="13dp"
+                android:paddingBottom="35dp"
+                android:maxWidth="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Lets just say this is a very very huge notice, not just one line."
+
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:id="@+id/download_filename"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <com.liuguangqiang.progressbar.CircleProgressBar
+                android:id="@+id/download_progress_bar"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>
